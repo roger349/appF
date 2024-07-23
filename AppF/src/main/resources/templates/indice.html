@@ -9,19 +9,40 @@
 </head>
 <body>
      <div><img id="logoAlura" src="../static/img/alura.svg" > </div>
-     <div class="cointainer-fluid">
-        <div class="row" >
-                     <form class="topico">
-                              <textarea id="textoIngresado" style="resize:none" placeholder="ingresar texto"></textarea>
-                              <button class="botonBuscar" type="button" onclick="mostrarTextoEncriptado()" style="border:none">
-                                  <img id="logoBuscar" src="../static/img/buscar4.png">
-                              </button>
-                    </form>
+     <div class="cointainer">
+        <div id="cuadroOpcion" class="row" >
+            <div id="Seleccionar" class="col-3">
+                <p><strong>Topicos Recientes</strong></p>
+                   <form  target="_blank">
+                         <select name="Categorias">
+                               <option>» Seleccionar Categoria para Mostrar«</option>
+                               <option value="">Front End</option>
+                               <option value="">Back End</option>
+                               <option value="">Programacion</option>
+                               <option value="">Data Science</option>
+                               <option value="">DevOps</option>
+                               <option value="">Off Topico</option>
+                        </select>
+                   </form>
+            </div>
+            <div id="botones" class="col-5">
+                 <button class="botonTodos" type="button">Todos</button>
+                 <button class="botonSinResolver" type="button">Sin Resolver</button>
+                 <button class="botonResueltos" type="button">Resueltos</button>
+            </div>
+            <div class="col-4">
+                 <form class="topico">
+                     <button class="botonCrearTopico" type="button">Crear Nuevo Topico</button>
+                     <textarea id="textoIngresado" style="resize:none" placeholder="Busque por Tema"></textarea>
+                     <button class="botonBuscar" type="button" onclick="mostrarTextoEncriptado()" style="border:none">
+                         <img id="logoBuscar" src="../static/img/buscar4.png"></button>
+                 </form>
+             </div>
         </div>
-        <div id="texto1" class="row">
+        <div id="cuadroMostrar" class="row">
                      <form>
                               <textarea id="salidadTexto" style="resize:none"></textarea>
-                              <button class="botonCopiar" type="button" onclick="copyToClipboard()">copiar</button>
+                              <!--<button class="botonCopiar" type="button" onclick="copyToClipboard()">Copiar</button>-->
                      </form>
         </div>
      </div>
